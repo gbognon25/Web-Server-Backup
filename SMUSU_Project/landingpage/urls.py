@@ -3,8 +3,8 @@ from . import views
 
 app_name = "landingpage"
 
-urlpatterns = {
+urlpatterns = [
     path("",views.index, name="IndexPage"),
-    path("AboutPage/",views.AboutPageView.as_view(),name="AboutPage"),
-    # path("AboutPage/",views.AboutPage,name="AboutPage"),
-}
+    re_path(r"^AboutPage/$",views.AboutPageView.as_view(),name="AboutPage"),
+    re_path(r"^ContributionPage/$",views.ContributionPageView.as_view(),name="ContributionPage"),
+]

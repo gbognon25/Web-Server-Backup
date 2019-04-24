@@ -7,3 +7,6 @@ def index(request):
 
 class AboutPageView(TemplateView):
     template_name = "landingpage/About.html"
+
+class ContributionPageView(TemplateView):
+    template_name = "landingpage/Contribution.html"
